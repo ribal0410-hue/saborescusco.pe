@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sabores del Cusco | Restaurante Tradicional Cusqueño</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================
+     NAVEGACIÓN CON LOGO
+     ============================================ -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <img src="ruta_del_logo.png"Logo" class="logo-img">
+      <span class="brand-text">Sabores del <span class="highlight">Cusco</span></span>
+    </div>
+    
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </label>
+    
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="#home">INICIO</a></li>
+        <li><a href="platos.html">PLATOS BANDERA</a></li>
+        <li><a href="menu.html">MENÚ</a></li>
+        <li><a href="VIVENCIA.html">VIVENCIAS</a></li>
+        <li><a href="#historia">HISTORIA</a></li>
+        <li><a href="#reservas">RESERVAS</a></li>
+      </ul>
+      
+      <div class="navbar-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO SECTION CON CARRUSEL
+     ============================================ -->
+<section id="home" class="hero-section">
+  <div class="carrusel">
+    <div class="carrusel-contenedor">
+      <!-- TUS IMÁGENES DEL CARRUSEL -->
+      <div class="carrusel-slide">
+        <img src="ruta_del_logo.png" alt="Imagen 1">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carrusel-slide">
+        <img src="images_chiriuchu.jpg" alt="Imagen 2">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carrusel-slide">
+        <img src="images_cuy.jpg.jpg" alt="Imagen 3">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carrusel-slide">
+        <img src="anticucho.jpg" alt="Imagen 4">
+        <div class="slide-overlay"></div>
+      </div>
+      <div class="carrusel-slide">
+        <img src="lomo_saltado.jpg" alt="Imagen 5">
+        <div class="slide-overlay"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-overlay"></div>
+  
+  <div class="container hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">Sabores que <span class="highlight">cuentan</span> historias</h1>
+      <p class="hero-subtitle">Cocina ancestral, ingredientes frescos y una experiencia única en el corazón del Cusco</p>
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn btn-primary">Ver Platos</a>
+        <a href="#reservas" class="btn btn-outline">Reservar Mesa</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-scroll">
+    <a href="#gallery"><i class="fas fa-chevron-down"></i></a>
+  </div>
+</section>
+
+<!-- ============================================
+     PLATOS BANDERA (GALERÍA)
+     ============================================ -->
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Galería</span>
+      <h2 class="section-title">Platos Bandera</h2>
+      <div class="divider"></div>
+      <p class="section-description">Los sabores que nos representan y enamoran a nuestros comensales</p>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="dish-card">
+        <div class="dish-image">
+          <img src="images_cuy.jpg.jpg" alt="Cuy Chactado">
+          <div class="dish-overlay">
+            <span class="dish-price">S/ 40.00</span>
+          </div>
+        </div>
+        <div class="dish-info">
+          <h3>Cuy Chactado</h3>
+          <p>Tradicional / Crocante / Andino</p>
+        </div>
+      </div>
+      
+      <div class="dish-card">
+        <div class="dish-image">
+          <img src="images_chiriuchu.jpg" alt="Chiri Uchu">
+          <div class="dish-overlay">
+            <span class="dish-price">S/ 35.00</span>
+          </div>
+        </div>
+        <div class="dish-info">
+          <h3>Chiri Uchu</h3>
+          <p>Fiestas / Típico / Cusqueño</p>
+        </div>
+      </div>
+      
+      <div class="dish-card">
+        <div class="dish-image">
+          <img src="images_rocoto.jpg" alt="Rocoto Relleno">
+          <div class="dish-overlay">
+            <span class="dish-price">S/ 25.00</span>
+          </div>
+        </div>
+        <div class="dish-info">
+          <h3>Rocoto Relleno</h3>
+          <p>Picante / Relleno / Arequipeño</p>
+        </div>
+      </div>
+
+      <div class="dish-card">
+  <div class="dish-image">
+    <img src="aji.jpg" alt="Aji de Gallina">
+    <div class="dish-overlay">
+      <span class="dish-price">S/ 30.00</span>
+    </div>
+  </div>
+  <div class="dish-info">
+    <h3>Aji de Gallina</h3>
+    <p>Cremoso / Ají amarillo / Tradicional</p>
+  </div>
+</div>
+<div class="dish-card">
+  <div class="dish-image">
+    <img src="lomo_saltado.jpg" alt="Lomo Saltado">
+    <div class="dish-overlay">
+      <span class="dish-price">S/ 35.00</span>
+    </div>
+  </div>
+  <div class="dish-info">
+    <h3>Lomo Saltado</h3>
+    <p>Saltado / Jugoso / Tradicional</p>
+  </div>
+</div>
+      
+      <div class="dish-card">
+        <div class="dish-image">
+          <img src="images_sopa.jpg" alt="Sopa de Quinua">
+          <div class="dish-overlay">
+            <span class="dish-price">S/ 18.00</span>
+          </div>
+        </div>
+        <div class="dish-info">
+          <h3>Sopa de Quinua</h3>
+          <p>Saludable / Andina / Nutritiva</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     MENÚ TÍPICO
+     ============================================ -->
+<section id="menu" class="menu-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Carta</span>
+      <h2 class="section-title">Menú Típico</h2>
+      <div class="divider"></div>
+      <p class="section-description">Platos tradicionales preparados con recetas ancestrales</p>
+    </div>
+    
+    <div class="menu-grid">
+      <div class="menu-card">
+        <div class="menu-icon">
+          <i class="fas fa-drumstick-bite"></i>
+        </div>
+        <div class="menu-content">
+          <h4>CUY CHACTADO <span>S/ 40.00</span></h4>
+          <p>Cuy entero, papas doradas, ensalada fresca y salsa de hierbas</p>
+        </div>
+      </div>
+      
+      <div class="menu-card">
+        <div class="menu-icon">
+          <i class="fas fa-utensils"></i>
+        </div>
+        <div class="menu-content">
+          <h4>CHIRI UCHU <span>S/ 35.00</span></h4>
+          <p>Maíz, cuy, cecina, gallina, chorizo y tortilla de huevo</p>
+        </div>
+      </div>
+      
+      <div class="menu-card">
+        <div class="menu-icon">
+          <i class="fas fa-pepper-hot"></i>
+        </div>
+        <div class="menu-content">
+          <h4>ROCOTO RELLENO <span>S/ 25.00</span></h4>
+          <p>Rocoto relleno de carne, queso, papa con pastel de chochos</p>
+        </div>
+      </div>
+      
+      <div class="menu-card">
+        <div class="menu-icon">
+          <i class="fas fa-seedling"></i>
+        </div>
+        <div class="menu-content">
+          <h4>SOPA DE QUINUA <span>S/ 18.00</span></h4>
+          <p>Quinua orgánica, verduras frescas y hierbas andinas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     BEBIDAS TRADICIONALES
+     ============================================ -->
+<section id="drinks" class="drinks-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Refrescos</span>
+      <h2 class="section-title">Bebidas Tradicionales</h2>
+      <div class="divider"></div>
+      <p class="section-description">Bebidas ancestrales que refrescan y curan</p>
+    </div>
+    
+    <div class="drinks-grid">
+      <div class="drink-card">
+        <div class="drink-image">
+          <img src="images_chicha_morada.jpg" alt="Chicha Morada">
+        </div>
+        <div class="drink-info">
+          <h4>Chicha Morada</h4>
+          <p>S/ 8.00</p>
+          <small>Maíz morado / Canela / Clavo</small>
+        </div>
+      </div>
+      
+      <div class="drink-card">
+        <div class="drink-image">
+          <img src="images_mate_coca.jpg" alt="Mate de Coca">
+        </div>
+        <div class="drink-info">
+          <h4>Mate de Coca</h4>
+          <p>S/ 6.00</p>
+          <small>Hojas de coca / Miel</small>
+        </div>
+      </div>
+      
+      <div class="drink-card">
+        <div class="drink-image">
+          <img src="images_anisado.jpg" alt="Anisado">
+        </div>
+        <div class="drink-info">
+          <h4>Anisado</h4>
+          <p>S/ 10.00</p>
+          <small>Licor de anís / Dulce</small>
+        </div>
+      </div>
+      
+      <div class="drink-card">
+        <div class="drink-image">
+          <img src="images_emoliente.jpg" alt="Emoliente">
+        </div>
+        <div class="drink-info">
+          <h4>Emoliente</h4>
+          <p>S/ 7.00</p>
+          <small>Hierbas medicinales / Caliente</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HISTORIA Y OPINIONES
+     ============================================ -->
+<section id="historia" class="history-section">
+  <div class="container">
+    <div class="history-grid">
+      <div class="history-content">
+        <span class="section-tag">Nuestra Historia</span>
+        <h2>Más de <span class="highlight">20 años</span> preservando la tradición</h2>
+        <div class="divider-left"></div>
+        <p>Sabores del Cusco nació con el sueño de preservar las recetas ancestrales de la sierra peruana. Desde hace más de 20 años, ofrecemos a nuestros clientes una experiencia auténtica, llena de sabor, cultura y tradición andina.</p>
+        <p>Cada ingrediente es seleccionado cuidadosamente de productores locales, apoyando así a la economía regional y garantizando la frescura en cada uno de nuestros platos.</p>
+        <div class="award-badge">
+          <i class="fas fa-trophy"></i>
+          <div>
+            <strong>Premio 2023</strong>
+            <small>Mejor Restaurante Tradicional Cusqueño</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonials">
+        <h3>Lo que dicen nuestros clientes</h3>
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"La sopa de quinua me hizo recordar la cocina de mi abuela. Increíble sabor."</p>
+          <div class="testimonial-author">
+            <strong>Ana López</strong>
+            <span class="stars">★★★★★</span>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"Disfruté mucho el Chiri Uchu. Muy bien preparado y el ambiente excelente."</p>
+          <div class="testimonial-author">
+            <strong>Carlos Huanca</strong>
+            <span class="stars">★★★★★</span>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left"></i>
+          <p>"El mejor cuy que he probado en mi vida. 100% recomendado."</p>
+          <div class="testimonial-author">
+            <strong>Luisa Vargas</strong>
+            <span class="stars">★★★★★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     RESERVAS
+     ============================================ -->
+<section id="reservas" class="reservas-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Reservas</span>
+      <h2 class="section-title">Reserva tu Mesa</h2>
+      <div class="divider"></div>
+      <p class="section-description">Disfruta de nuestros platos andinos y bebidas tradicionales</p>
+    </div>
+    
+    <div class="reservas-grid">
+      <div class="reservas-info">
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>Ubicación</h4>
+            <p>Calle Hatunrumiyoc 123, Cusco, Perú</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <h4>Teléfono</h4>
+            <p>+51 984 123 456</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <i class="far fa-clock"></i>
+          <div>
+            <h4>Horarios</h4>
+            <p>Lun-Vie: 10am - 9pm | Sáb-Dom: 11am - 10pm</p>
+          </div>
+        </div>
+      </div>
+      
+      <form class="reserva-form" action="#" method="post">
+        <div class="form-row">
+          <input type="text" placeholder="Tu nombre completo" required>
+          <input type="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="Teléfono" required>
+          <input type="date" required>
+        </div>
+        <div class="form-row">
+          <input type="time" required>
+          <select required>
+            <option value="">N° de personas</option>
+            <option value="1">1 persona</option>
+            <option value="2">2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5">5 personas</option>
+            <option value="6+">6 o más</option>
+          </select>
+        </div>
+        <textarea rows="4" placeholder="Comentarios adicionales (opcional)"></textarea>
+        <button type="submit" class="btn-reservar">Reservar ahora <i class="fas fa-arrow-right"></i></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <h3>Sabores del Cusco</h3>
+        <p>Preservando las recetas ancestrales de la sierra peruana con amor y dedicación.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#gallery">Galería</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h4>Horarios</h4>
+        <p><i class="far fa-calendar-alt"></i> Lunes a Viernes: 10:00 - 21:00</p>
+        <p><i class="far fa-calendar-alt"></i> Sábado y Domingo: 11:00 - 22:00</p>
+        <p><i class="fas fa-map-marker-alt"></i> Calle Hatunrumiyoc 123, Cusco</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sabores del Cusco | Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

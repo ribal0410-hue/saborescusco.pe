@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Menú | Sabores del Cusco</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+
+<!-- ============================================
+     NAVEGACIÓN
+     ============================================ -->
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-brand">
+      <img src="ruta_del_logo.png" alt="Logo" class="logo-img">
+      <span class="brand-text">Sabores del <span class="highlight">Cusco</span></span>
+    </div>
+    
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </label>
+    
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="PLATOS.html">PLATOS BANDERA</a></li>
+        <li><a href="menu.html" >MENÚ</a></li>
+        <li><a href="VIVENCIA.html">VIVENCIAS</a></li>
+        <li><a href="galeria.html">HISTORIAS</a></li>
+        <li><a href="reservas.html">RESERVAS</a></li>
+      </ul>
+      
+      <div class="navbar-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     SECCIÓN MENÚ
+     ============================================ -->
+<section class="menu-page">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Nuestra Carta</span>
+      <h1 class="section-title">Menú <span class="highlight">Típico</span></h1>
+      <div class="divider"></div>
+      <p class="section-description">Descubre nuestros platos tradicionales preparados con recetas ancestrales</p>
+    </div>
+    
+    <!-- FILTROS POR CATEGORÍA -->
+    <div class="filtros-menu">
+      <button class="filtro-btn active" data-categoria="todos">Todos</button>
+      <button class="filtro-btn" data-categoria="entradas">Entradas</button>
+      <button class="filtro-btn" data-categoria="principales">Platos Principales</button>
+      <button class="filtro-btn" data-categoria="postres">Postres</button>
+      <button class="filtro-btn" data-categoria="bebidas">Bebidas</button>
+    </div>
+    
+    <!-- GRID DE PLATOS -->
+    <div class="menu-grid" id="menuGrid">
+      <!-- Los platos se cargarán con JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <h3>Sabores del Cusco</h3>
+        <p>Preservando las recetas ancestrales de la sierra peruana con amor y dedicación.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-contact">
+        <h4>Horarios</h4>
+        <p><i class="far fa-calendar-alt"></i> Lunes a Viernes: 10:00 - 21:00</p>
+        <p><i class="far fa-calendar-alt"></i> Sábado y Domingo: 11:00 - 22:00</p>
+        <p><i class="fas fa-map-marker-alt"></i> Calle Hatunrumiyoc 123, Cusco</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Sabores del Cusco | Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="menu-script.js"></script>
+</body>
+</html>

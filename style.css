@@ -1,0 +1,1071 @@
+/* ============================================
+   SABORES DEL CUSCO - ESTILOS COMPLETOS
+   ============================================ */
+
+/* Variables */
+:root {
+  --color-primary: #8B0000;
+  --color-primary-dark: #6B0000;
+  --color-secondary: #F6D76B;
+  --color-secondary-dark: #e6c75a;
+  --color-dark: #1a1a1a;
+  --color-gray: #666;
+  --color-light: #f9f9f9;
+  --color-white: #ffffff;
+  --font-main: 'Poppins', sans-serif;
+  --transition: all 0.3s ease;
+  --shadow: 0 5px 20px rgba(0,0,0,0.08);
+  --shadow-hover: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-dark);
+  line-height: 1.6;
+  background-color: var(--color-white);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================================
+   NAVEGACIÓN
+   ============================================ */
+.navbar {
+  background: rgba(26, 26, 26, 0.95);
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* Tamaño del logo */
+.logo-img {
+  width: 40px;    
+  height: 40px;   
+  object-fit: cover;
+  border-radius: 8px;  /* Opcional: esquinas redondeadas */
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.brand-text .highlight {
+  color: var(--color-secondary);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: var(--color-secondary);
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: var(--transition);
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.navbar-social {
+  display: flex;
+  gap: 12px;
+}
+
+.navbar-social a {
+  width: 35px;
+  height: 35px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.navbar-social a:hover {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   HERO SECTION CON CARRUSEL AUTOMÁTICO
+   ============================================ */
+.hero-section {
+  margin-top: 80px;
+  position: relative;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* CARRUSEL */
+.carrusel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  animation: carruselAnimacion 20s infinite linear;
+}
+
+.carrusel-slide {
+  width: 20%;
+  height: 100%;
+  position: relative;
+  background-color: #484242; 
+}
+
+/* IMÁGENES COMPLETAS SIN CORTAR  */
+.carrusel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;     
+  object-position: center; 
+  display: block;
+}
+
+/* Overlay dentro de cada slide */
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, (0,0,0,0.6), (0,0,0,0.4));
+  pointer-events: none;
+}
+
+/* Animación del carrusel */
+@keyframes carruselAnimacion {
+  0% { transform: translateX(0); }
+  8% { transform: translateX(0); }
+  10% { transform: translateX(-20%); }
+  18% { transform: translateX(-20%); }
+  20% { transform: translateX(-40%); }
+  28% { transform: translateX(-40%); }
+  30% { transform: translateX(-60%); }
+  38% { transform: translateX(-60%); }
+  40% { transform: translateX(-80%); }
+  48% { transform: translateX(-80%); }
+  50% { transform: translateX(-80%); }
+  58% { transform: translateX(-60%); }
+  60% { transform: translateX(-40%); }
+  68% { transform: translateX(-40%); }
+  70% { transform: translateX(-20%); }
+  78% { transform: translateX(-20%); }
+  80% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+/* Pausar animación al pasar el mouse */
+.carrusel:hover .carrusel-contenedor {
+  animation-play-state: paused;
+}
+/* Overlay general */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, (247, 246, 246, 0.7), (200, 198, 198, 0.987));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-title .highlight {
+  color: var(--color-secondary);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(139,0,0,0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Scroll down */
+.hero-scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.hero-scroll a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition);
+  animation: bounce 2s infinite;
+  text-decoration: none;
+}
+
+.hero-scroll a:hover {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* ============================================
+   SECCIONES GENERALES
+   ============================================ */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 5px 15px;
+  background: rgba(139,0,0,0.1);
+  color: var(--color-primary);
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--color-dark);
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: var(--color-secondary);
+  margin: 15px auto;
+}
+
+.divider-left {
+  width: 60px;
+  height: 3px;
+  background: var(--color-secondary);
+  margin: 15px 0;
+}
+
+.section-description {
+  color: var(--color-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   GALERÍA DE PLATOS
+   ============================================ */
+.gallery-section {
+  padding: 80px 0;
+  background: var(--color-light);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.dish-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.dish-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+}
+
+.dish-image {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.dish-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.dish-card:hover .dish-image img {
+  transform: scale(1.1);
+}
+
+.dish-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(139,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.dish-card:hover .dish-overlay {
+  opacity: 1;
+}
+
+.dish-price {
+  background: var(--color-secondary);
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-dark);
+}
+
+.dish-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.dish-info h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.dish-info p {
+  color: var(--color-gray);
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   MENÚ SECCIÓN
+   ============================================ */
+.menu-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.menu-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: var(--color-light);
+  border-radius: 16px;
+  transition: var(--transition);
+}
+
+.menu-card:hover {
+  transform: translateX(10px);
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.menu-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.menu-content {
+  flex: 1;
+}
+
+.menu-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-content h4 span {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.menu-content p {
+  color: var(--color-gray);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* ============================================
+   BEBIDAS SECCIÓN
+   ============================================ */
+.drinks-section {
+  padding: 80px 0;
+  background: var(--color-light);
+}
+
+.drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.drink-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.drink-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.drink-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.drink-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.drink-card:hover .drink-image img {
+  transform: scale(1.05);
+}
+
+.drink-info {
+  padding: 20px;
+}
+
+.drink-info h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.drink-info p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 5px 0;
+}
+
+.drink-info small {
+  color: var(--color-gray);
+  font-size: 0.75rem;
+}
+
+/* ============================================
+   HISTORIA SECCIÓN
+   ============================================ */
+.history-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+}
+
+.history-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.history-content h2 .highlight {
+  color: var(--color-primary);
+}
+
+.history-content p {
+  color: var(--color-gray);
+  margin-bottom: 20px;
+}
+
+.award-badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: var(--color-light);
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.award-badge i {
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+
+.award-badge strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.award-badge small {
+  color: var(--color-gray);
+  font-size: 0.8rem;
+}
+
+.testimonials h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.testimonial-card {
+  background: var(--color-light);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.testimonial-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow);
+}
+
+.testimonial-card i {
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   RESERVAS SECCIÓN
+   ============================================ */
+.reservas-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--color-light), white);
+}
+
+.reservas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.reservas-info {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info-item i {
+  width: 45px;
+  height: 45px;
+  background: var(--color-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.info-item h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  color: var(--color-gray);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.reserva-form {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.reserva-form input,
+.reserva-form select,
+.reserva-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-family: var(--font-main);
+  transition: var(--transition);
+}
+
+.reserva-form input:focus,
+.reserva-form select:focus,
+.reserva-form textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139,0,0,0.1);
+}
+
+.btn-reservar {
+  width: 100%;
+  background: var(--color-primary);
+  color: white;
+  padding: 12px 35px;
+  border-radius: 40px;
+  border: none;
+  font-weight: 600;
+  margin-top: 15px;
+  transition: var(--transition);
+  cursor: pointer;
+  font-family: var(--font-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-reservar:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(139,0,0,0.3);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--color-dark);
+  color: rgba(255,255,255,0.8);
+  padding: 60px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-info h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: var(--color-secondary);
+  color: var(--color-dark);
+  transform: translateY(-3px);
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links ul li a:hover {
+  color: var(--color-secondary);
+  padding-left: 5px;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.footer-contact p i {
+  width: 25px;
+  color: var(--color-secondary);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.8rem;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .menu-icon {
+    display: block;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(26, 26, 26, 0.98);
+    flex-direction: column;
+    padding: 40px 20px;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+  
+  .menu-toggle:checked ~ .nav-menu {
+    left: 0;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-social {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .history-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .reservas-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-social {
+    justify-content: center;
+  }
+  
+  .divider-left {
+    margin: 15px auto;
+  }
+  
+  .history-content {
+    text-align: center;
+  }
+  
+  .award-badge {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .gallery-section,
+  .menu-section,
+  .drinks-section,
+  .history-section,
+  .reservas-section {
+    padding: 50px 0;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .drinks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
